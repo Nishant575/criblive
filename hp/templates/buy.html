@@ -1,0 +1,56 @@
+{%extends "layout.html"%}
+{%block content%}
+<!--MAP CONFIGURATION-->
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="form">
+                <form method="POST" action="" enctype="multipart/form-data">
+                    {{ form.hidden_tag() }}
+                    <fieldset class="form-group">
+                        <div class="row">
+                            <div class="col-6 d-flex justify-content-center fields1">
+                                <div class="form-group">
+                                    {{ form.loc.label(class="form-control-label") }}
+                                    {% if form.loc.errors %}
+                                        {{ form.loc(class="form-control is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.area.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        {{ form.loc(class="form-control form-control-lg") }}
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="col-6 d-flex justify-content-center fields2">
+                               <div class="form-group" style="margin-top :40px; padding:auto; margin-left: 0%;">
+                                    {{ form.submit(class="btn submit-btn2 sb-fill-left2") }}
+                               </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>    
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col d-flex justify-content-center">
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497699.9973874144!2d77.35074421903857!3d12.95384772557775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1651261295030!5m2!1sen!2sin" 
+            width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    {% if load %}
+    <div class="row">
+        <div class="col d-flex justify-content-center">
+            <div id="curve_chart" style="width: 800px; height: 450px; padding-top: 40px;"></div>
+        </div>
+    </div>
+    {%endif%}
+</div>
+
+{%endblock content%}

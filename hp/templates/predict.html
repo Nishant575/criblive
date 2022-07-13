@@ -1,0 +1,94 @@
+{%extends "layout.html"%}
+{%block content%}
+<div class="container main-cont">
+    <div class="row">
+        <div class="col">
+            <div class="content-section info-form ">
+                <form method="POST" action="" enctype="multipart/form-data">
+                    {{ form.hidden_tag() }}
+                    <fieldset class="form-group"style="padding-left:400px; padding-right: 400px;">
+                        
+                        <legend class="mb-4 border-bottom title-form"style="text-align: center; letter-spacing: 4px;">
+                        <h3>
+                            Estimate P₹ice
+                        </h3></legend>
+                        <div class="row">
+                        <div class="col-6 d-flex justify-content-center fields1">
+                            <div class="form-group" style="margin-top :20px; padding:auto; font-size: 25px;">
+                                {{ form.area.label(class="form-control-label") }}
+                                {% if form.area.errors %}
+                                    {{ form.area(class="form-control is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.area.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form.area(class="form-control form-control-lg") }}
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="col-6 d-flex justify-content-center fields2 ">
+                            <div class="form-group" style="margin-top :20px; padding:auto; font-size: 25px;">
+                                {{ form.bhk.label(class="form-control-label") }}
+                                {% if form.bhk.errors %}
+                                    {{ form.bhk(class="form-control form-control-lg is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.bhk.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form.bhk(class="form-control form-control-lg") }}
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="col-6 d-flex justify-content-center fields3">
+                        <div class="form-group" style="margin-top :20px; padding:auto; font-size: 25px; ">
+                            {{ form.bath.label(class="form-control-label") }}
+                            {% if form.bath.errors %}
+                                {{ form.bath(class="form-control form-control-lg is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.bath.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.bath(class="form-control form-control-lg") }}
+                            {% endif %}
+                        </div>
+                        </div>
+                        <div class="col-6 d-flex justify-content-center fields4">
+                        <div class="form-group" style="margin-top :20px; padding:auto; font-size: 25px;">
+                            {{ form.location.label(class="form-control-label") }}
+                            {% if form.location.errors %}
+                                {{ form.location(class="form-control form-control-lg is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.location.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.location(class="form-control form-control-lg") }}
+                            {% endif %}
+                        </div>
+                        </div>
+                        </div>
+                    </fieldset>
+                    <div class="form-group" style="margin-top :40px; padding:auto; margin-left: 10%;">
+                         {{ form.submit(class="btn submit-btn sb-fill-left") }}
+                    </div>
+                </form>
+                
+            </div>
+            {% if price %}
+            <div class="pred-price" id="a1">
+                <br>
+                <h3>{{price}} Lakhs</h3>
+            </div>
+            {% endif %}
+            
+        </div>
+    </div>
+</div>
+{%endblock content%}

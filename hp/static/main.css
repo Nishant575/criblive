@@ -1,0 +1,309 @@
+html{
+
+    min-height: 100%;
+    position: relative;
+  
+  }
+  body{
+      margin: 0px;
+      padding: 0px;
+      background : rgba(0,0,0,0.7) url(resources/background-img.jpg);
+      background-size : cover;
+      
+      min-height: 100%;
+      display: grid;
+      color: rgb(229, 240, 255);
+  }
+
+.container {
+   margin: auto;
+   margin-top: 2%;
+}
+.main-cont{
+
+   margin-top: 10px;
+}
+ .form-control-label{
+
+    margin-bottom: 20px;
+ }
+
+ .pred-price{
+
+    text-align: center;
+    font-weight: 400;
+    background: rgba(29, 45, 68, 0.6);
+
+ }
+
+ #a1{
+    text-align: center;
+ }
+
+ h3{
+
+    text-align: center;
+    font-size: 1.7em;
+    font-weight: 200;
+ }
+h5{
+   font-size: 1.5em;
+}
+ img{
+   border-radius: 10px;
+ }
+
+
+.form-control{
+
+   background: rgba(29, 45, 68, 0.6);
+   border-top : 2px;
+   border-left : 1px;
+   border-right: 2px;
+   color:aliceblue;
+   font-weight: 100;
+}
+.spacer{
+   height: 100px;
+}
+
+.ml14 {
+   font-weight: 100;
+   color: #bae0dd;
+ 
+ }
+ 
+ .ml14 .text-wrapper {
+   position: relative;
+   display: inline-block;
+   padding-top: 0.1em;
+   padding-right: 0.05em;
+   padding-bottom: 0.15em;
+ }
+ 
+ .ml14 .line {
+   opacity: 0;
+   position: absolute;
+   left: 0;
+   height: 2px;
+   width: 100%;
+   background-color: #bae0dd;
+   transform-origin: 100% 100%;
+   bottom: 0;
+ }
+ 
+ .ml14 .letter {
+   display: inline-block;
+   line-height: 1em;
+ }
+ 
+ .card{
+    
+   height: 250px;
+   background: rgba(29, 45, 68, 0.8);
+   padding: 10px;  
+ }
+
+ .form-control{
+
+   width: 400px;
+ 
+ }
+
+ .fields1{
+
+   padding-right: 170px;
+ }
+
+ .fields2{
+
+   padding-left:170px;
+
+ }
+
+ .fields3{
+
+   padding-right: 170px;
+ }
+
+ .fields4{
+
+   padding-left:170px;
+ }
+
+ .navbar{
+
+   height: 70px;
+ }
+
+ .card-foot{
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 60px;
+ }
+
+ .btn-primary{
+   
+   position: relative;
+   box-sizing: border-box;
+   display: inline-block;
+   overflow: hidden;
+   padding: 10px 20px;
+   text-decoration: none;
+   width:200px;
+   height:60px;
+   border-color: rgb(61, 235, 238);
+   z-index: 0;  
+   font-size: 1.5em;
+   font-weight: 220;
+ }
+ .btn-primary i {
+   padding-right: 8px;
+} 
+ 
+ .hb-fill-right::before {
+   position: absolute;
+   content: "";
+   background-image: linear-gradient(to right, #085078 0%, #7ccdc4  100%);
+   transition-duration: 0.3s;
+   z-index: -1;
+   inset: 0px auto auto 0px;
+   width: 0px;
+   height: 100%;
+   opacity: 1;
+} 
+
+
+.hb-fill-right:hover::before {
+   width: 100%;
+   height: 100%;
+   opacity: 1;
+} 
+
+
+.hb-fill-right:hover {
+   border-color: rgb(35, 160, 162);
+   color: rgb(4, 4, 4);
+   font-weight: 300;
+   transition: color 0.3s ease, background 0s ease 0.3s;
+} 
+
+
+.card-text{
+
+   font-weight: 200;
+   letter-spacing: 1px;
+
+}
+
+.card-title{
+
+   letter-spacing: 2px;
+   font-weight: 250;
+}
+
+u{
+   width: 3px;
+}
+
+ .ml11 {
+   font-weight: 300;
+   font-size: 2.8em;
+ }
+ 
+ .ml11 .text-wrapper {
+   position: relative;
+   display: inline-block;
+   padding-top: 0.1em;
+   padding-right: 0.05em;
+   padding-bottom: 0.15em;
+ }
+ 
+ .ml11 .line {
+   opacity: 0;
+   position: absolute;
+   left: 0;
+   font-size: 1em;;
+   width: 3px;
+   transform-origin: 0 50%;
+ }
+ 
+ .ml11 .line1 { 
+   bottom: 1; 
+   left: 0;
+ }
+ 
+ .ml11 .letter {
+   display: inline-block;
+   line-height: 1em;
+ }
+ 
+ .navbar-brand{
+   background: rgba(29, 45, 68, 0.9);
+   width: 160px;
+   border-radius: 25px;
+   text-align: center;
+
+ }
+
+ .submit-btn{
+   
+   position: relative;
+   box-sizing: border-box;
+   display: inline-block;
+   margin-left: 35%;
+   overflow: hidden;
+   padding: 10px 20px;
+   text-decoration: none;
+   width:200px;
+   border-color: rgb(61, 235, 238);
+   z-index: 0;  
+   color:aliceblue;
+   font-size: 25px;
+   font-weight: 220;
+   transition: 800ms;
+ }
+ .submit-btn i {
+   padding-right: 8px;
+} 
+.submit-btn:hover{
+
+   font-weight: 300;
+   border-color: rgb(35, 160, 162);
+   background-image: linear-gradient(to right, #085078 0%, #7ccdc4  100%);
+}
+
+.hm-cont{
+
+   margin-top: 150px;
+}
+
+.submit-btn2{
+   
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-left: 0%;
+  overflow: hidden;
+  padding: 10px 20px;
+  text-decoration: none;
+  width:200px;
+  border-color: rgb(61, 235, 238);
+  z-index: 0;  
+  color:aliceblue;
+  font-size: 25px;
+  font-weight: 220;
+  transition: 800ms;
+}
+.submit-btn2 i {
+  padding-right: 8px;
+} 
+.submit-btn2:hover{
+
+  font-weight: 300;
+  border-color: rgb(35, 160, 162);
+  background-image: linear-gradient(to right, #085078 0%, #7ccdc4  100%);
+}
+
