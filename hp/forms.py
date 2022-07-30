@@ -2,12 +2,12 @@ from random import choices
 from flask_wtf import FlaskForm  
 from flask_wtf.file import FileField, FileAllowed
 from wtforms import StringField, SubmitField, SelectField, IntegerField
-from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
+from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError , NumberRange
 from hp import util
 
 class InfoForm(FlaskForm):
     area = IntegerField('Area (in Sqft.)',
-                        validators=[DataRequired()])
+                        validators=[DataRequired(),NumberRange(min=1, max=2500)])
     bhk = SelectField('BHK', choices=[1,2,3,4,5], coerce=int)
     bath = SelectField('Bath', choices=[1,2,3,4,5], coerce=int)
     location = SelectField('Location', choices=util.get_location_names())
